@@ -186,8 +186,21 @@ textarea {
   box-shadow: 0 12px 28px rgba(46, 125, 50, 0.28);
 }
 
+.btn-outline {
+  background: rgba(46, 125, 50, 0.06);
+  color: var(--primary);
+  border: 1px solid rgba(46, 125, 50, 0.18);
+}
+
 .btn-block {
   width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 78px;
 }
 
 .hero-image {
