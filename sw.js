@@ -1,25 +1,23 @@
-const CACHE_NAME = 'ecoentregas-v1';
-const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/css/main.css',
-  '/css/responsive.css',
-  '/js/integrations/google-sheets.js',
-  '/js/utils/validators.js'
-];
+const CACHE_NAME = 'ecoentregas-v2';
 
 self.addEventListener('install', (event) => {
+  event.waitUntil(self.skipWaiting());
+});
+
+self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS_TO_CACHE);
-    })
+    caches.keys().then((keys) => Promise.all(
+      keys
+        .filter((key) => key !== CACHE_NAME)
+        .map((key) => caches.delete(key))
+    )).then(() => self.clients.claim())
   );
 });
 
 self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET') return;
+
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
+    fetch(event.request).catch(() => caches.match(event.request))
   );
 });
