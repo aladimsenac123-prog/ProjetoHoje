@@ -1,7 +1,8 @@
-const CACHE_NAME = 'ecoentregas-v2';
+const CACHE_NAME = 'ecoentregas-v4';
+const APP_SHELL = ['./', './index.html', './css/main.css', './css/responsive.css', './js/main.js'];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(self.skipWaiting());
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (event) => {
@@ -17,7 +18,5 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
-  event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
-  );
+  event.respondWith(caches.match(event.request).then((cached) => cached || fetch(event.request)));
 });
