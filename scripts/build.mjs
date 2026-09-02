@@ -13,6 +13,8 @@ const minify = (content, extension) => {
   return content;
 };
 
+const isBinary = (extension) => ['.gif', '.ico', '.jpeg', '.jpg', '.png', '.webp'].includes(extension);
+
 const copy = async (source, target) => {
   const entries = await readdir(source, { withFileTypes: true });
   await mkdir(target, { recursive: true });
@@ -21,7 +23,7 @@ const copy = async (source, target) => {
     const targetPath = join(target, entry.name);
     if (entry.isDirectory()) return copy(sourcePath, targetPath);
     const extension = extname(entry.name);
-    const content = await readFile(sourcePath, extension === '.png' ? undefined : 'utf8');
+    const content = await readFile(sourcePath, isBinary(extension) ? undefined : 'utf8');
     await writeFile(targetPath, extension === '.html' || extension === '.css' || extension === '.js' ? minify(content, extension) : content);
   }));
 };
@@ -35,7 +37,7 @@ for (const entry of sourceFiles) {
   if (info.isDirectory()) await copy(source, target);
   else {
     const extension = extname(entry);
-    const content = await readFile(source, extension === '.png' ? undefined : 'utf8');
+    const content = await readFile(source, isBinary(extension) ? undefined : 'utf8');
     await writeFile(target, extension === '.html' || extension === '.css' || extension === '.js' ? minify(content, extension) : content);
   }
 }
