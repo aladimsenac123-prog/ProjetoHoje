@@ -12,12 +12,13 @@
     <meta property="og:type" content="website">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <link rel="icon" href="./assets/logo-ecoentregas.svg" type="image/svg+xml">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     
     <!-- CSS Styles -->
     <link rel="stylesheet" href="./css/main.css">
@@ -25,6 +26,8 @@
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#167a62">
+    <script async src="https://tag.goadopt.io/injector.js?website_code=SEU_CODIGO_ADOPT"></script>
 
     <!-- Google Analytics 4 (Trocar G-XXXXXXXXXX pelo ID real) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -36,11 +39,9 @@
     </script>
 
     <!-- Google Tag Manager (Trocar GTM-XXXXXXX pelo ID real) -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='&l'?'tag.js':'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <script>window.GOOGLE_SHEETS_URL = 'SEU_ENDPOINT_GOOGLE_APPS_SCRIPT';</script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -50,7 +51,7 @@
     <!-- Navbar Fixa -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">🌿 EcoEntregas</a>
+            <a href="#" class="logo"><img src="./assets/logo-ecoentregas.svg" alt="EcoEntregas"> <span>EcoEntregas</span></a>
             <nav class="nav-menu" id="navMenu">
                 <a href="#inicio" class="nav-link">Início</a>
                 <a href="#como-funciona" class="nav-link">Como Funciona</a>
@@ -71,12 +72,19 @@
         <section id="inicio" class="hero">
             <div class="container hero-grid">
                 <div class="hero-content">
+                    <p class="eyebrow">Logística urbana com impacto positivo</p>
                     <h1 class="hero-title">Entregas rápidas e sustentáveis para o seu negócio</h1>
                     <p class="hero-subtitle">Reduza a pegada de carbono da sua empresa com entregas 100% feitas de bicicleta. Eficiência e sustentabilidade juntas.</p>
-                    <a href="#parceiro" class="btn btn-primary">Seja um Parceiro</a>
+                    <div class="hero-actions">
+                        <a href="#parceiro" class="btn btn-primary">Seja um Parceiro</a>
+                        <a href="#como-funciona" class="btn btn-outline">Conheça a operação</a>
+                    </div>
                 </div>
                 <div class="hero-image">
-                    <div class="hero-placeholder-img" aria-label="Ilustração de entrega ecológica">🚴‍♂️📦</div>
+                    <figure class="hero-photo">
+                        <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80" alt="Ciclista urbano com mochila de entrega" loading="eager">
+                        <figcaption><i data-lucide="leaf" aria-hidden="true"></i> Entregas que respeitam a cidade</figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
@@ -109,9 +117,17 @@
         <section id="raio" class="section">
             <div class="container">
                 <h2 class="section-title">Raio de Cobertura</h2>
-                <p class="section-desc">Atendemos toda a região central e bairros comerciais com rapidez e agilidade.</p>
+                <p class="section-desc">Atendemos Santo Antônio de Jesus e bairros comerciais com rapidez e agilidade.</p>
+                <div class="location-note">
+                    <i data-lucide="map-pin" aria-hidden="true"></i>
+                    <div>
+                        <strong>Senac em Santo Antônio de Jesus</strong>
+                        <span>Espaço Empresarial SAJ, Santo Antônio de Jesus - BA</span>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Senac+Santo+Ant%C3%B4nio+de+Jesus+Espa%C3%A7o+Empresarial+SAJ" target="_blank" rel="noopener noreferrer">Abrir rota <i data-lucide="external-link" aria-hidden="true"></i></a>
+                </div>
                 <div class="map-container">
-                    <iframe title="Mapa de Cobertura EcoEntregas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197364654929!2d-46.65588142345151!3d-23.56141316158586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f4379f2cbf618!2sAv.%20Paulista%2C%20São%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe title="Mapa do Senac no Espaço Empresarial SAJ" src="https://www.google.com/maps?q=Senac+Santo+Ant%C3%B4nio+de+Jesus+Espa%C3%A7o+Empresarial+SAJ&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
@@ -141,6 +157,31 @@
                         <h3>Tempo Real</h3>
                         <p>Acompanhe o status do envio com transparência total.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section sustainability-story">
+            <div class="container story-grid">
+                <img src="https://images.unsplash.com/photo-1559348349-86f1f65817fe?auto=format&fit=crop&w=800&q=80" alt="Bicicleta de carga usada para entrega sustentável" loading="lazy">
+                <div>
+                    <p class="eyebrow">Escolhas que circulam</p>
+                    <h2>Mais que uma entrega: um jeito melhor de ocupar a cidade.</h2>
+                    <p>Rotas de bicicleta aproximam negócios e pessoas, reduzem o trânsito e ajudam a construir bairros mais leves para todos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="delivery-gallery" aria-label="Entregas sustentáveis em movimento">
+            <div class="container gallery-grid">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=800&q=80" alt="Entregador pedalando na cidade" loading="lazy">
+                    <figcaption>Entregas ágeis, limpas e urbanas.</figcaption>
+                </figure>
+                <div class="gallery-copy">
+                    <p class="eyebrow">A cidade é o nosso caminho</p>
+                    <h2>Logística sustentável que você consegue ver.</h2>
+                    <p>Cada pedido é levado de bicicleta, com menos emissões e mais proximidade entre o comércio local e seus clientes.</p>
                 </div>
             </div>
         </section>
@@ -214,14 +255,16 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div>
-                <h3>🌿 EcoEntregas</h3>
+                <h3 class="footer-logo"><img src="./assets/logo-ecoentregas.svg" alt=""> <span>EcoEntregas</span></h3>
                 <p>Logística limpa para cidades inteligentes.</p>
             </div>
             <div>
                 <h4>Links Úteis</h4>
                 <ul>
                     <li><a href="#inicio">Início</a></li>
-                    <li><a href="pages/parceiros.html">Termos e LGPD</a></li>
+                    <li><a href="pages/privacidade.html">Privacidade e LGPD</a></li>
+                    <li><a href="pages/cookies.html">Cookies</a></li>
+                    <li><a href="pages/termos.html">Termos de Uso</a></li>
                 </ul>
             </div>
             <div>
@@ -236,8 +279,8 @@
     </footer>
 
     <!-- WhatsApp Flutuante -->
-    <a href="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20em%20ser%20parceiro%20da%20EcoEntregas." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
-        💬
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20as%20entregas%20ecol%C3%B3gicas%20da%20EcoEntregas." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+        <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="" aria-hidden="true">
     </a>
 
     <!-- VLibras Widget -->
@@ -251,12 +294,10 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
-    <!-- AdOpt LGPD Placeholder Script (Trocar SEU_ID_AQUI pelo ID real) -->
-    <script async src="https://tag.goadopt.io/SEU_ID_AQUI"></script>
+    <script>lucide.createIcons();</script>
 
     <!-- Scripts Principais -->
-    <script type="module" src="js/utils/validators.js"></script>
-    <script type="module" src="js/integrations/google-sheets.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/integrations/google-sheets.js"></script>
 </body>
 </html>
