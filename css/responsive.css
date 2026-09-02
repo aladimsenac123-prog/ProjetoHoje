@@ -11,7 +11,7 @@
 }
 @media (max-width: 620px) {
   .section { padding: 4rem 0; }
-  .hero { padding: 4.5rem 0 3.5rem; }
+  .hero { padding: 3rem 0 3rem; }
   .hero-actions, .hero-actions .btn { width: 100%; }
   .cards-grid, .partner-form, .footer-grid { grid-template-columns: 1fr; }
   .story-grid, .gallery-grid { grid-template-columns: 1fr; gap: 2rem; }
