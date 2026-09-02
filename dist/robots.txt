@@ -1,0 +1,7 @@
+User's active file: robots.txt
+
+User's requested content:
+
+User-agent: *
+Allow: /
+Sitemap: https://ecoentregas.com.br/sitemap.xml
