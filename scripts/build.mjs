@@ -9,7 +9,7 @@ const sourceFiles = ['index.html', 'manifest.json', 'robots.txt', 'sitemap.xml',
 const minify = (content, extension) => {
   if (extension === '.html') return content.replace(/<!--(?!\[if)[\s\S]*?-->/g, '').replace(/\s{2,}/g, ' ').replace(/>\s+</g, '><').trim();
   if (extension === '.css') return content.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s{2,}/g, ' ').replace(/\s*([{}:;,])\s*/g, '$1').trim();
-  if (extension === '.js') return content.replace(/\/\/.*$/gm, '').replace(/\s{2,}/g, ' ').trim();
+  if (extension === '.js') return content.replace(/^\s*\/\/.*$/gm, '').replace(/\s{2,}/g, ' ').trim();
   return content;
 };
 

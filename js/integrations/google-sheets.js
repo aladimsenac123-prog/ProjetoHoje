@@ -5,7 +5,7 @@ import {
   isValidPhoneBR,
 } from '../utils/validators.js';
 
-const GOOGLE_SHEETS_URL = window.GOOGLE_SHEETS_URL || '';
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwqRLNC7lb3CNpsHr-K3001gbhojh_7L5prGfnFkeyKgqxhvwMhICDIF--Xi4YpeaoPHA/exec';
 const form = document.querySelector('#partnerForm');
 
 if (form) {
@@ -112,21 +112,13 @@ if (form) {
       setLoadingState(true);
       setFeedback('', 'success');
 
-      const response = await fetch(GOOGLE_SHEETS_URL, {
+      await fetch(GOOGLE_SHEETS_URL, {
         method: 'POST',
-        mode: 'cors',
+        mode: 'no-cors',
         cache: 'no-store',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
       });
-
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(errorText || 'Falha ao enviar a solicitação.');
-      }
 
       form.reset();
       clearFieldErrors();
