@@ -31,8 +31,7 @@ button, input, select, textarea { font: inherit; }
 .navbar { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,.92); border-bottom: 1px solid var(--border); backdrop-filter: blur(14px); }
 .nav-container { display: flex; align-items: center; justify-content: space-between; min-height: 76px; }
 .logo, h1, h2, h3, h4 { font-family: var(--font-display); }
-.logo { display: inline-flex; align-items: center; gap: .5rem; color: var(--primary-dark); font-size: 1.2rem; font-weight: 800; }
-.logo img { width: 42px; height: 42px; object-fit: contain; }
+.logo { color: var(--primary-dark); font-size: 1.2rem; font-weight: 800; }
 .nav-menu { display: flex; align-items: center; gap: 1.25rem; }
 .nav-link { color: var(--text); font-weight: 700; font-size: .92rem; }
 .nav-link:hover, .nav-link:focus-visible { color: var(--primary); }
@@ -108,8 +107,6 @@ textarea { min-height: 120px; resize: vertical; }
 .footer { padding-top: 3rem; color: rgba(255,255,255,.9); background: #102d27; }
 .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 2rem; }
 .footer h3, .footer h4 { margin-top: 0; }
-.footer-logo { display: flex; align-items: center; gap: .55rem; }
-.footer-logo img { width: 42px; height: 42px; object-fit: contain; }
 .footer p, .footer li, .footer a { color: rgba(255,255,255,.75); }
 .footer ul { display: grid; gap: .5rem; padding: 0; margin: .5rem 0 0; list-style: none; }
 .footer-bottom { margin-top: 2rem; padding: 1rem; border-top: 1px solid rgba(255,255,255,.12); text-align: center; font-size: .9rem; }
