@@ -52,8 +52,8 @@ button, input, select, textarea { font: inherit; }
 .btn-outline { border: 1px solid var(--primary); color: var(--primary-dark); background: transparent; }
 .btn-block { width: 100%; }
 .hero-image { display: flex; justify-content: center; }
-.hero-photo { position: relative; width: min(100%, 520px); margin: 0; overflow: hidden; border: 1px solid rgba(22,122,98,.18); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
-.hero-photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center; }
+.hero-photo { position: relative; width: min(100%, 400px); margin: 0; overflow: hidden; border: 1px solid rgba(22,122,98,.18); border-radius: 24px; background: var(--surface); box-shadow: var(--shadow); }
+.hero-photo img { width: min(100%, 400px); height: min(42vw, 400px); aspect-ratio: 1 / 1; object-fit: cover; object-position: center; }
 .hero-photo figcaption { display: flex; align-items: center; gap: .45rem; padding: .8rem 1rem; color: var(--primary-dark); font-weight: 800; font-size: .9rem; }
 .hero-photo figcaption svg, .location-note svg { width: 1.1rem; height: 1.1rem; }
 
@@ -72,13 +72,13 @@ button, input, select, textarea { font: inherit; }
 .card p, .policy-card p, .policy-card li { color: var(--muted); }
 .sustainability-story { background: #fffdf7; }
 .story-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 4rem; align-items: center; }
-.story-grid img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow); }
+.story-grid img { width: min(100%, 420px); height: min(42vw, 420px); aspect-ratio: 1 / 1; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow); }
 .story-grid h2 { max-width: 620px; margin: 0 0 1rem; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
 .story-grid p:last-child { max-width: 560px; margin: 0; color: var(--muted); font-size: 1.1rem; }
 .delivery-gallery { padding: 5rem 0; background: #eaf4f0; }
 .gallery-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 4rem; align-items: center; }
 .gallery-grid figure { margin: 0; }
-.gallery-grid figure img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow); }
+.gallery-grid figure img { width: min(100%, 420px); height: min(42vw, 420px); aspect-ratio: 1 / 1; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow); }
 .gallery-grid figcaption { margin-top: .7rem; color: var(--muted); font-size: .9rem; }
 .gallery-copy h2 { max-width: 520px; margin: 0 0 1rem; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; }
 .gallery-copy p:last-child { max-width: 520px; margin: 0; color: var(--muted); font-size: 1.1rem; }

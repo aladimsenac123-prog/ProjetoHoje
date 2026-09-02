@@ -15,6 +15,7 @@
   .hero-actions, .hero-actions .btn { width: 100%; }
   .cards-grid, .partner-form, .footer-grid { grid-template-columns: 1fr; }
   .story-grid, .gallery-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-photo img, .story-grid img, .gallery-grid figure img { width: min(100%, 380px); height: min(90vw, 380px); margin-inline: auto; }
   .form-group.full-width, .form-feedback { grid-column: auto; }
   .partner-form { padding: 1rem; }
   .co2-display { width: 100%; padding: 1.5rem 1rem; }
