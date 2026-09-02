@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dist = join(root, 'dist');
-const sourceFiles = ['index.html', 'manifest.json', 'robots.txt', 'sitemap.xml', 'sw.js', 'assets', 'css', 'js', 'pages'];
+const sourceFiles = ['index.html', 'manifest.json', 'robots.txt', 'sitemap.xml', 'sw.js', '.nojekyll', 'assets', 'css', 'js', 'pages'];
 
 const minify = (content, extension) => {
   if (extension === '.html') return content.replace(/<!--(?!\[if)[\s\S]*?-->/g, '').replace(/\s{2,}/g, ' ').replace(/>\s+</g, '><').trim();
