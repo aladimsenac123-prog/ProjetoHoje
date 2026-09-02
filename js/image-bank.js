@@ -1,10 +1,6 @@
 const imageBank = {
   hero: [
     {
-      url: 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1500&q=85',
-      alt: 'Ciclista urbano com mochila de entrega',
-    },
-    {
       url: 'https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       alt: 'Bicicleta urbana em uma área verde',
     },
