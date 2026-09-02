@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ecoentregas-v5';
+const CACHE_NAME = 'ecoentregas-v6';
 const APP_SHELL = ['./', './index.html', './css/main.css', './css/responsive.css', './js/main.js'];
 
 self.addEventListener('install', (event) => {

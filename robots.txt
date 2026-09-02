@@ -4,4 +4,4 @@ User's requested content:
 
 User-agent: *
 Allow: /
-Sitemap: https://ecoentregas.com.br/sitemap.xml
+Sitemap: https://aladimsenac123-prog.github.io/ProjetoHoje/sitemap.xml
