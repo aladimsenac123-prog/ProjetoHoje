@@ -5,7 +5,7 @@ import {
   isValidPhoneBR,
 } from '../utils/validators.js';
 
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwqRLNC7lb3CNpsHr-K3001gbhojh_7L5prGfnFkeyKgqxhvwMhICDIF--Xi4YpeaoPHA/exec';
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzoH5ac_Jh3CIupcx1m7pDTkJvFWvx5MSHaf4u5TyIsAIbIHbvl_uICgcN8EVVjAxmzZw/exec';
 const form = document.querySelector('#partnerForm');
 
 if (form) {
